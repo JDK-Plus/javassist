@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>org.javassist</groupId>
-  <artifactId>javassist</artifactId>
+  <groupId>plus.jdk.Javassist</groupId>
+  <artifactId>plus.jdk.Javassist</artifactId>
   <packaging>bundle</packaging>
   <description>
   	Javassist (JAVA programming ASSISTant) makes Java bytecode manipulation
@@ -79,7 +79,7 @@
       </roles>
       <timezone>0</timezone>
     </developer>
-    
+
     <developer>
       <id>scottmarlow</id>
       <name>Scott Marlow</name>
@@ -94,41 +94,23 @@
 
 
   </developers>
-
   <distributionManagement>
-  <!--  
-      You need entries in your .m2/settings.xml like this:
-   <servers>
-    <server>
-       <id>jboss-releases-repository</id>
-       <username>your_jboss.org_username</username>
-       <password>password</password>
-    </server>
-    <server>
-       <id>jboss-snapshots-repository</id>
-       <username>your_jboss.org_username</username>
-       <password>password</password>
-    </server>
-  </servers>
-  
-  To deploy a snapshot, you need to run
-  
-  mvn deploy -Dversion=3.x.y-SNAPSHOT
-
-  To deploy a release you need to change the version to 3.x.y.GA and run
-
-  mvn deploy
-    -->
+    <!--        <snapshotRepository>-->
+    <!--            <id>ossrh</id>-->
+    <!--            <url>https://oss.sonatype.org/content/repositories/snapshots</url>-->
+    <!--        </snapshotRepository>-->
     <repository>
-      <id>jboss-releases-repository</id>
-      <name>JBoss Releases Repository</name>
-      <url>https://repository.jboss.org/nexus/service/local/staging/deploy/maven2/</url>
+      <id>ossrh</id>
+      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
     </repository>
     <snapshotRepository>
-      <id>jboss-snapshots-repository</id>
-      <name>JBoss Snapshots Repository</name>
-      <url>https://repository.jboss.org/nexus/content/repositories/snapshots/</url>
+      <id>ossrh</id>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
+    <!--        <repository>-->
+    <!--            <id>ossrh</id>-->
+    <!--            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>-->
+    <!--        </repository>-->
   </distributionManagement>
   <build>
     <sourceDirectory>src/main/</sourceDirectory>
@@ -209,7 +191,7 @@
           <instructions>
             <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
             <Bundle-Version>${project.version}</Bundle-Version>
-            <Import-Package>!com.sun.jdi.*</Import-Package>	
+            <Import-Package>!com.sun.jdi.*</Import-Package>
             <Export-Package>!com.sun.jdi.*,javassist.*;version="${project.version}"</Export-Package>
           </instructions>
         </configuration>

@@ -5,9 +5,9 @@ import java.net.URLClassLoader;
 import java.util.HashMap;
 import java.util.Map;
 
-import javassist.ClassPool;
-import javassist.CodeConverter;
-import javassist.CtClass;
+import plus.jdk.javassist.ClassPool;
+import plus.jdk.javassist.CodeConverter;
+import plus.jdk.javassist.CtClass;
 import junit.framework.TestCase;
 
 public class ArrayAccessReplaceTest extends TestCase {

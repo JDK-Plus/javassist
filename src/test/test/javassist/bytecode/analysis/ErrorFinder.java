@@ -3,10 +3,10 @@ package test.javassist.bytecode.analysis;
 import java.io.BufferedReader;
 import java.io.FileReader;
 
-import javassist.ClassPool;
-import javassist.CtClass;
-import javassist.CtMethod;
-import javassist.bytecode.analysis.Analyzer;
+import plus.jdk.javassist.ClassPool;
+import plus.jdk.javassist.CtClass;
+import plus.jdk.javassist.CtMethod;
+import plus.jdk.javassist.bytecode.analysis.Analyzer;
 
 /**
  * Simple testing tool that verifies class files can be analyzed.

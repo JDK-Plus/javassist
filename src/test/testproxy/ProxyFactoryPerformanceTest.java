@@ -8,9 +8,9 @@ import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.InvocationHandler;
 import net.sf.cglib.proxy.NoOp;
 */
-import javassist.util.proxy.MethodFilter;
-import javassist.util.proxy.MethodHandler;
-import javassist.util.proxy.ProxyFactory;
+import plus.jdk.javassist.util.proxy.MethodFilter;
+import plus.jdk.javassist.util.proxy.MethodHandler;
+import plus.jdk.javassist.util.proxy.ProxyFactory;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

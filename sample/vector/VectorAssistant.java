@@ -1,7 +1,7 @@
 package sample.vector;
 
 import java.io.IOException;
-import javassist.*;
+
 import sample.preproc.Assistant;
 
 /**

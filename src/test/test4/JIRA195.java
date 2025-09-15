@@ -1,8 +1,8 @@
 package test4;
 
-import javassist.ClassPool;
-import javassist.CtClass;
-import javassist.CtMethod;
+import plus.jdk.javassist.ClassPool;
+import plus.jdk.javassist.CtClass;
+import plus.jdk.javassist.CtMethod;
 
 public class JIRA195 {
     public int run() { return test(3); }

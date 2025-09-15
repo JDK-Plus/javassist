@@ -1,7 +1,5 @@
 package sample.evolve;
 
-import javassist.*;
-
 /**
  * Evolution provides a set of methods for instrumenting bytecodes.
  * 

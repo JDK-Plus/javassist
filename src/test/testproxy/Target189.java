@@ -1,6 +1,6 @@
 package testproxy;
 
-import javassist.util.proxy.MethodHandler;
+import plus.jdk.javassist.util.proxy.MethodHandler;
 import java.lang.reflect.Method;
 
 public class Target189 {

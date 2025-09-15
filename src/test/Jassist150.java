@@ -1,10 +1,11 @@
-import javassist.CannotCompileException;
-import javassist.ClassPool;
-import javassist.CtClass;
-import javassist.CtMethod;
-import javassist.NotFoundException;
-import javassist.expr.ExprEditor;
-import javassist.expr.MethodCall;
+import plus.jdk.javassist.CannotCompileException;
+import plus.jdk.javassist.ClassPool;
+import plus.jdk.javassist.CtClass;
+import plus.jdk.javassist.CtMethod;
+import plus.jdk.javassist.NotFoundException;
+import plus.jdk.javassist.expr.ExprEditor;
+import plus.jdk.javassist.expr.MethodCall;
+import plus.jdk.javassist.compiler.MemberResolver;
 
 public class Jassist150 {
     public static final String BASE_PATH = "./";
@@ -105,6 +106,6 @@ public class Jassist150 {
                 e.printStackTrace();
             }
         }
-        System.out.println("size: " + javassist.compiler.MemberResolver.getInvalidMapSize());
+        System.out.println("size: " + MemberResolver.getInvalidMapSize());
     }
 }

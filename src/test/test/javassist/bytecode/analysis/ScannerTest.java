@@ -2,17 +2,17 @@ package test.javassist.bytecode.analysis;
 
 import java.io.IOException;
 
-import javassist.CannotCompileException;
-import javassist.ClassPool;
-import javassist.CtClass;
-import javassist.CtMethod;
-import javassist.NotFoundException;
-import javassist.bytecode.AccessFlag;
-import javassist.bytecode.Bytecode;
-import javassist.bytecode.MethodInfo;
-import javassist.bytecode.Opcode;
-import javassist.bytecode.analysis.Subroutine;
-import javassist.bytecode.analysis.SubroutineScanner;
+import plus.jdk.javassist.CannotCompileException;
+import plus.jdk.javassist.ClassPool;
+import plus.jdk.javassist.CtClass;
+import plus.jdk.javassist.CtMethod;
+import plus.jdk.javassist.NotFoundException;
+import plus.jdk.javassist.bytecode.AccessFlag;
+import plus.jdk.javassist.bytecode.Bytecode;
+import plus.jdk.javassist.bytecode.MethodInfo;
+import plus.jdk.javassist.bytecode.Opcode;
+import plus.jdk.javassist.bytecode.analysis.Subroutine;
+import plus.jdk.javassist.bytecode.analysis.SubroutineScanner;
 import junit.framework.TestCase;
 
 /**

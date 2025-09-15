@@ -11,3 +11,5 @@ lib/
 .settings
 TestLog.xml
 
+.idea
+.joycode

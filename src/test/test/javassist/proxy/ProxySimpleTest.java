@@ -9,10 +9,11 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.lang.reflect.Method;
 
-import javassist.util.proxy.MethodFilter;
-import javassist.util.proxy.MethodHandler;
-import javassist.util.proxy.Proxy;
-import javassist.util.proxy.ProxyFactory;
+import plus.jdk.javassist.Loader;
+import plus.jdk.javassist.util.proxy.MethodFilter;
+import plus.jdk.javassist.util.proxy.MethodHandler;
+import plus.jdk.javassist.util.proxy.Proxy;
+import plus.jdk.javassist.util.proxy.ProxyFactory;
 
 public class ProxySimpleTest extends TestCase {
 
@@ -55,7 +56,7 @@ public class ProxySimpleTest extends TestCase {
         ProxyFactory.ClassLoaderProvider cp = ProxyFactory.classLoaderProvider;
         ProxyFactory.classLoaderProvider = new ProxyFactory.ClassLoaderProvider() {
             public ClassLoader get(ProxyFactory pf) {
-                return new javassist.Loader();
+                return new Loader();
             }
         };
         ProxyFactory pf = new ProxyFactory();

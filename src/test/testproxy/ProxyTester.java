@@ -4,10 +4,12 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Modifier;
 import java.lang.reflect.InvocationTargetException;
-import javassist.util.proxy.ProxyFactory;
-import javassist.util.proxy.MethodFilter;
-import javassist.util.proxy.MethodHandler;
-import javassist.util.proxy.ProxyObject;
+
+import plus.jdk.javassist.Loader;
+import plus.jdk.javassist.util.proxy.ProxyFactory;
+import plus.jdk.javassist.util.proxy.MethodFilter;
+import plus.jdk.javassist.util.proxy.MethodHandler;
+import plus.jdk.javassist.util.proxy.ProxyObject;
 import junit.framework.Assert;
 import junit.framework.TestCase;
 import java.io.*;
@@ -351,7 +353,7 @@ public class ProxyTester extends TestCase {
         ProxyFactory.ClassLoaderProvider cp = ProxyFactory.classLoaderProvider;
         ProxyFactory.classLoaderProvider = new ProxyFactory.ClassLoaderProvider() {
             public ClassLoader get(ProxyFactory pf) {
-                return new javassist.Loader();
+                return new Loader();
             }
         };
         ProxyFactory pf = new ProxyFactory();
