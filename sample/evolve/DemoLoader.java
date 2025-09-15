@@ -1,7 +1,5 @@
 package sample.evolve;
 
-import javassist.*;
-
 /**
  * DemoLoader is a class loader for running a program including
  * an updatable class.  This simple loader allows only a single

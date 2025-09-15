@@ -1,4 +1,7 @@
-import javassist.*;
+import plus.jdk.javassist.ClassPool;
+import plus.jdk.javassist.CtClass;
+import plus.jdk.javassist.CtMethod;
+import plus.jdk.javassist.CtNewMethod;
 
 public class Test {
     public static void main(String[] args) throws Exception {

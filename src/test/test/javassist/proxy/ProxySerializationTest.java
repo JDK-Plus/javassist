@@ -1,16 +1,15 @@
 package test.javassist.proxy;
 
-import javassist.util.proxy.*;
 import junit.framework.TestCase;
+import plus.jdk.javassist.util.proxy.*;
 
 import java.io.*;
 import java.lang.reflect.Constructor;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
  * Test to ensure that serialization and deserialization of javassist proxies via
- * {@link javassist.util.proxy.ProxyObjectOutputStream} and  @link javassist.util.proxy.ProxyObjectInputStream}
+ * {@link ProxyObjectOutputStream} and  @link javassist.util.proxy.ProxyObjectInputStream}
  * reuses classes located in the proxy cache. This tests the fixes provided for JASSIST-42 and JASSIST-97.
  */
 public class ProxySerializationTest extends TestCase

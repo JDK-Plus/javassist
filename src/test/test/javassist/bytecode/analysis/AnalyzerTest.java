@@ -4,18 +4,18 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import javassist.ClassPool;
-import javassist.CtClass;
-import javassist.CtMethod;
-import javassist.bytecode.AccessFlag;
-import javassist.bytecode.BadBytecode;
-import javassist.bytecode.Bytecode;
-import javassist.bytecode.CodeIterator;
-import javassist.bytecode.MethodInfo;
-import javassist.bytecode.Opcode;
-import javassist.bytecode.analysis.Analyzer;
-import javassist.bytecode.analysis.Frame;
-import javassist.bytecode.analysis.Type;
+import plus.jdk.javassist.ClassPool;
+import plus.jdk.javassist.CtClass;
+import plus.jdk.javassist.CtMethod;
+import plus.jdk.javassist.bytecode.AccessFlag;
+import plus.jdk.javassist.bytecode.BadBytecode;
+import plus.jdk.javassist.bytecode.Bytecode;
+import plus.jdk.javassist.bytecode.CodeIterator;
+import plus.jdk.javassist.bytecode.MethodInfo;
+import plus.jdk.javassist.bytecode.Opcode;
+import plus.jdk.javassist.bytecode.analysis.Analyzer;
+import plus.jdk.javassist.bytecode.analysis.Frame;
+import plus.jdk.javassist.bytecode.analysis.Type;
 import junit.framework.TestCase;
 
 /**

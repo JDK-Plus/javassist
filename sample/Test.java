@@ -1,7 +1,5 @@
 package sample;
 
-import javassist.*;
-
 /*
    A very simple sample program
 

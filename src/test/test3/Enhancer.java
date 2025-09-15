@@ -1,6 +1,7 @@
 package test3;
 
-import javassist.*;
+import plus.jdk.javassist.*;
+
 import java.lang.reflect.Method;
 import java.lang.reflect.Field;
 

@@ -1,6 +1,6 @@
 package test.javassist.proxy;
 
-import javassist.util.proxy.ProxyFactory;
+import plus.jdk.javassist.util.proxy.ProxyFactory;
 import junit.framework.TestCase;
 
 /**
