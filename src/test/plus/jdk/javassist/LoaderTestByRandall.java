@@ -27,7 +27,7 @@ public class LoaderTestByRandall extends TestCase {
     }
     
     public void testLoadGoodClass() throws Exception {
-        String name = "javassist.LoaderTestByRandall";
+        String name = "plus.jdk.javassist.LoaderTestByRandall";
         cp.get(name);
         Class clazz = loader.loadClass(name);
         assertEquals("Class not loaded by loader",
@@ -57,7 +57,7 @@ public class LoaderTestByRandall extends TestCase {
     }
     
     public void testLoadBadCodeModification() throws Exception {
-        String classname = "javassist.LoaderTestByRandall";
+        String classname = "plus.jdk.javassist.LoaderTestByRandall";
 
         Translator trans = new Translator() {
             public void start(ClassPool pool)

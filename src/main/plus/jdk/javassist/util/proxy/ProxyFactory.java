@@ -193,7 +193,7 @@ public class ProxyFactory {
     private static final String FILTER_SIGNATURE_FIELD = "_filter_signature";
     private static final String FILTER_SIGNATURE_TYPE = "[B";
     private static final String HANDLER = "handler";
-    private static final String NULL_INTERCEPTOR_HOLDER = "javassist.util.proxy.RuntimeSupport";
+    private static final String NULL_INTERCEPTOR_HOLDER = "plus.jdk.javassist.util.proxy.RuntimeSupport";
     private static final String DEFAULT_INTERCEPTOR = "default_interceptor";
     private static final String HANDLER_TYPE
         = 'L' + MethodHandler.class.getName().replace('.', '/') + ';';
@@ -1436,9 +1436,9 @@ public class ProxyFactory {
         minfo.setExceptionsAttribute(ea);
         Bytecode code = new Bytecode(cp, 0, 1);
         code.addAload(0);
-        code.addInvokestatic("javassist.util.proxy.RuntimeSupport",
+        code.addInvokestatic("plus.jdk.javassist.util.proxy.RuntimeSupport",
                              "makeSerializedProxy",
-                             "(Ljava/lang/Object;)Ljavassist/util/proxy/SerializedProxy;");
+                             "(Ljava/lang/Object;)Lplus/jdk/javassist/util/proxy/SerializedProxy;");
         code.addOpcode(Opcode.ARETURN);
         minfo.setCodeAttribute(code.toCodeAttribute());
         return minfo;

@@ -78,7 +78,7 @@ public abstract class CtClass {
      * <pre>java -jar javassist.jar</pre>
      */
     public static void main(String[] args) {
-        System.out.println("Javassist version " + CtClass.version);
+        System.out.println("plus.jdk.javassist version " + CtClass.version);
         System.out.println("Copyright (C) 1999-2015 Shigeru Chiba."
                            + " All Rights Reserved.");
     }

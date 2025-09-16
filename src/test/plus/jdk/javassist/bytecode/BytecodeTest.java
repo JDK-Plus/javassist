@@ -832,7 +832,7 @@ public class BytecodeTest extends TestCase {
     public static void main(String[] args) {
         // junit.textui.TestRunner.run(suite());
         junit.awtui.TestRunner.main(new String[] {
-            "javassist.bytecode.BytecodeTest" });
+            "plus.jdk.javassist.bytecode.BytecodeTest" });
     }
 
     public static Test suite() {

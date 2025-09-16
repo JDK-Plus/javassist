@@ -159,7 +159,7 @@ public class Bench extends JvstTestRoot {
 
     public static void main(String[] args) {
         // junit.textui.TestRunner.run(suite());
-        junit.swingui.TestRunner.main(new String[] { "javassist.Bench" });
+        junit.swingui.TestRunner.main(new String[] { "plus.jdk.javassist.Bench" });
     }
 
     public static Test suite() {

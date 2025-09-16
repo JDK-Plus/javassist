@@ -163,7 +163,7 @@ public final class InsertGap0 extends JvstTestRoot {
 
     public void testExample() throws Throwable {
         ClassPool pool = ClassPool.getDefault();
-        CtClass cc = pool.get("javassist.bytecode.Gap0Example");
+        CtClass cc = pool.get("plus.jdk.javassist.bytecode.Gap0Example");
         CtMethod[] ms = cc.getDeclaredMethods();
         for (int i = 0; i < ms.length; i++) {
             addMethod(ms[i], cc);
@@ -182,7 +182,7 @@ public final class InsertGap0 extends JvstTestRoot {
 
     public void testExample2() throws Throwable {
         ClassPool pool = ClassPool.getDefault();
-        CtClass cc = pool.get("javassist.bytecode.Gap0Example2");
+        CtClass cc = pool.get("plus.jdk.javassist.bytecode.Gap0Example2");
         CtMethod[] ms = cc.getDeclaredMethods();
         for (int i = 0; i < ms.length; i++) {
             addMethod(ms[i], cc);

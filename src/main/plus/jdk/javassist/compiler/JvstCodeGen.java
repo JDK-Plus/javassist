@@ -265,8 +265,8 @@ public class JvstCodeGen extends MemberCodeGen {
             throw new CompileError("no such " + cflowName + ": " + name);
 
         bytecode.addGetstatic((String)names[0], (String)names[1],
-                              "Ljavassist/runtime/Cflow;");
-        bytecode.addInvokevirtual("javassist.runtime.Cflow",
+                              "Lplus/jdk/javassist/runtime/Cflow;");
+        bytecode.addInvokevirtual("plus.jdk.javassist.runtime.Cflow",
                                   "value", "()I");
         exprType = INT;
         arrayDim = 0;

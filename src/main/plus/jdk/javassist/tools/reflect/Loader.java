@@ -33,7 +33,7 @@ import plus.jdk.javassist.ClassPool;
  *     javassist.tools.reflect.Loader cl
  *         = (javassist.tools.reflect.Loader)Main.class.getClassLoader();
  *     cl.makeReflective("Person", "MyMetaobject",
- *                       "javassist.tools.reflect.ClassMetaobject");
+ *                       "plus.jdk.javassist.tools.reflect.ClassMetaobject");
  *     cl.run("MyApp", args);
  *   }
  * }
@@ -57,7 +57,7 @@ import plus.jdk.javassist.ClassPool;
  *   public static void main(String[] args) throws Throwable {
  *     javassist.tools.reflect.Loader cl = new javassist.tools.reflect.Loader();
  *     cl.makeReflective("Person", "MyMetaobject",
- *                       "javassist.tools.reflect.ClassMetaobject");
+ *                       "plus.jdk.javassist.tools.reflect.ClassMetaobject");
  *     cl.run("MyApp", args);
  *   }
  * }
@@ -85,7 +85,7 @@ import plus.jdk.javassist.ClassPool;
  *     javassist.Loader cl
  *         = new javassist.Loader(ClassPool.getDefault(reflection));
  *     reflection.makeReflective("Person", "MyMetaobject",
- *                               "javassist.tools.reflect.ClassMetaobject");
+ *                               "plus.jdk.javassist.tools.reflect.ClassMetaobject");
  *     cl.run("MyApp", args);
  *   }
  * }
@@ -129,7 +129,7 @@ public class Loader extends plus.jdk.javassist.Loader {
      */
     public Loader() throws CannotCompileException, NotFoundException {
         super();
-        delegateLoadingOf("javassist.tools.reflect.Loader");
+        delegateLoadingOf("plus.jdk.javassist.tools.reflect.Loader");
 
         reflection = new Reflection();
         ClassPool pool = ClassPool.getDefault();

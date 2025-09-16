@@ -101,12 +101,12 @@ public class Compiler {
                 String metaobj, classobj;
 
                 if (entries[i].metaobject == null)
-                    metaobj = "javassist.tools.reflect.Metaobject";
+                    metaobj = "plus.jdk.javassist.tools.reflect.Metaobject";
                 else
                     metaobj = entries[i].metaobject;
 
                 if (entries[i].classobject == null)
-                    classobj = "javassist.tools.reflect.ClassMetaobject";
+                    classobj = "plus.jdk.javassist.tools.reflect.ClassMetaobject";
                 else
                     classobj = entries[i].classobject;
 

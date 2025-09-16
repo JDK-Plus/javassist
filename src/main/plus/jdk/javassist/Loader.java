@@ -187,7 +187,7 @@ public class Loader extends ClassLoader {
         source = cp;
         translator = null;
         domain = null;
-        delegateLoadingOf("javassist.Loader");
+        delegateLoadingOf("plus.jdk.javassist.Loader");
     }
 
     /**

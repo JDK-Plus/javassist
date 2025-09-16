@@ -551,7 +551,7 @@ public abstract class CtBehavior extends CtMember {
 
         pool.recordCflow(name, declaringClass.getName(), fname);
         try {
-            CtClass type = pool.get("javassist.runtime.Cflow");
+            CtClass type = pool.get("plus.jdk.javassist.runtime.Cflow");
             CtField field = new CtField(type, fname, cc);
             field.setModifiers(Modifier.PUBLIC | Modifier.STATIC);
             cc.addField(field, CtField.Initializer.byNew(type));

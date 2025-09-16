@@ -42,7 +42,7 @@ public class CompTest extends TestCase {
     }
 
     public void testCast() throws Exception {
-        Javac jc = new Javac(sloader.get("javassist.compiler.Print"));
+        Javac jc = new Javac(sloader.get("plus.jdk.javassist.compiler.Print"));
         jc.compileStmnt(
               "{((javassist.compiler.Advice)"
             + "  (new javassist.compiler.HelloAspect().getAdvice().get(0)))"
@@ -50,13 +50,13 @@ public class CompTest extends TestCase {
     }
 
     public void testStaticMember() throws Exception {
-        String src = "javassist.compiler.Print#k = 3;";
+        String src = "plus.jdk.javassist.compiler.Print#k = 3;";
         Parser p = new Parser(new Lex(src));
         SymbolTable stb = new SymbolTable();
         Stmnt s = p.parseStatement(stb);
         Expr expr = (Expr)s.getLeft().getLeft();
         assertEquals('#', expr.getOperator());
-        assertEquals("javassist.compiler.Print",
+        assertEquals("plus.jdk.javassist.compiler.Print",
                      ((Symbol)expr.oprand1()).get());
     }
 
@@ -84,7 +84,7 @@ public class CompTest extends TestCase {
     }
 
     public void testRecordLocalVar() throws Exception {
-        Javac jv = new Javac(sloader.get("javassist.compiler.Print"));
+        Javac jv = new Javac(sloader.get("plus.jdk.javassist.compiler.Print"));
         jv.gen.recordVariable("I", "i0", 0, jv.stable);
         isRightDecl((Declarator)jv.stable.get("i0"), TokenId.INT, 0, null);
         jv.gen.recordVariable("[I", "i1", 1, jv.stable);
@@ -121,7 +121,7 @@ public class CompTest extends TestCase {
     public static void main(String[] args) {
         // junit.textui.TestRunner.run(suite());
         junit.awtui.TestRunner.main(new String[] {
-            "javassist.compiler.CompTest" });
+            "plus.jdk.javassist.compiler.CompTest" });
     }
 
     public static Test suite() {

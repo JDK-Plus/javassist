@@ -35,7 +35,7 @@ public class AccessorMaker {
     private int uniqueNumber;
     private HashMap accessors;
 
-    static final String lastParamType = "javassist.runtime.Inner";
+    static final String lastParamType = "plus.jdk.javassist.runtime.Inner";
 
     public AccessorMaker(CtClass c) {
         clazz = c;

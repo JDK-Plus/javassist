@@ -122,10 +122,10 @@ public class StackMapTest extends TestCase {
     }
 
     public void testCommonSuper() throws Exception {
-        CtClass type = loader.get("javassist.CtClassType[]");
-        CtClass base = loader.get("javassist.CtClass[]");
-        CtClass array = loader.get("javassist.CtArray[]");
-        CtClass array2 = loader.get("javassist.CtArray[][]");
+        CtClass type = loader.get("plus.jdk.javassist.CtClassType[]");
+        CtClass base = loader.get("plus.jdk.javassist.CtClass[]");
+        CtClass array = loader.get("plus.jdk.javassist.CtArray[]");
+        CtClass array2 = loader.get("plus.jdk.javassist.CtArray[][]");
         CtClass str = loader.get("java.lang.String[]");
         CtClass strObj = loader.get("java.lang.String");
         CtClass obj = loader.get("java.lang.Object[]");
@@ -141,7 +141,7 @@ public class StackMapTest extends TestCase {
     }
 
     public void testRebuild() throws Exception {
-        CtClass cc = loader.get("javassist.bytecode.StackMapTest$T1");
+        CtClass cc = loader.get("plus.jdk.javassist.bytecode.StackMapTest$T1");
         rebuildStackMaps2(cc);
         //Class c = cc.toClass();
         //Object t1 = c.newInstance();
@@ -179,7 +179,7 @@ public class StackMapTest extends TestCase {
     }
 
     public void testRebuild2() throws Exception {
-        CtClass cc = loader.get("javassist.bytecode.StackMapTest$C3");
+        CtClass cc = loader.get("plus.jdk.javassist.bytecode.StackMapTest$C3");
         rebuildStackMaps2(cc);
         cc.writeFile();
         Object t1 = make(cc.getName());
@@ -199,7 +199,7 @@ public class StackMapTest extends TestCase {
     }
 
     public void testRebuild3() throws Exception {
-        CtClass cc = loader.get("javassist.bytecode.StackMapTest$T3");
+        CtClass cc = loader.get("plus.jdk.javassist.bytecode.StackMapTest$T3");
         rebuildStackMaps2(cc);
         cc.writeFile();
         Object t1 = make(cc.getName());
@@ -238,7 +238,7 @@ public class StackMapTest extends TestCase {
     }
 
     public void testRebuildArray() throws Exception {
-        CtClass cc = loader.get("javassist.bytecode.StackMapTest$T4");
+        CtClass cc = loader.get("plus.jdk.javassist.bytecode.StackMapTest$T4");
         rebuildStackMaps2(cc);
         cc.writeFile();
         Object t1 = make(cc.getName());
@@ -298,7 +298,7 @@ public class StackMapTest extends TestCase {
     }
 
     public void testRebuildConstructor() throws Exception {
-        CtClass cc = loader.get("javassist.bytecode.StackMapTest$T5");
+        CtClass cc = loader.get("plus.jdk.javassist.bytecode.StackMapTest$T5");
         rebuildStackMaps2(cc);
         cc.writeFile();
         Object t1 = make(cc.getName());
@@ -325,7 +325,7 @@ public class StackMapTest extends TestCase {
     }
 
     public void testRebuildConstructor2() throws Exception {
-        CtClass cc = loader.get("javassist.bytecode.StackMapTest$T6");
+        CtClass cc = loader.get("plus.jdk.javassist.bytecode.StackMapTest$T6");
         rebuildStackMaps2(cc);
         cc.writeFile();
         Object t1 = make(cc.getName());
@@ -343,7 +343,7 @@ public class StackMapTest extends TestCase {
     }
 
     public void testSwitchCase() throws Exception {
-        CtClass cc = loader.get("javassist.bytecode.StackMapTest$T7");
+        CtClass cc = loader.get("plus.jdk.javassist.bytecode.StackMapTest$T7");
         // CodeConverter conv = new CodeConverter();
         // conv.replaceNew(cc, cc, "make2");
         // cc.instrument(conv);
@@ -352,7 +352,7 @@ public class StackMapTest extends TestCase {
             sbuf.append("s =\"" + i + "\";");
 
         cc.getDeclaredMethod("foo").insertBefore(sbuf.toString());
-        cc.getDeclaredMethod("test2").setBody(loader.get("javassist.bytecode.StackMapTest$T8").getDeclaredMethod("test2"), null);
+        cc.getDeclaredMethod("test2").setBody(loader.get("plus.jdk.javassist.bytecode.StackMapTest$T8").getDeclaredMethod("test2"), null);
         //rebuildStackMaps2(cc);
         cc.writeFile();
         Object t1 = make(cc.getName());
@@ -386,13 +386,13 @@ public class StackMapTest extends TestCase {
     }
 
     public void testSwitchCase2() throws Exception {
-        CtClass cc = loader.get("javassist.bytecode.StackMapTest$T7b");
+        CtClass cc = loader.get("plus.jdk.javassist.bytecode.StackMapTest$T7b");
         StringBuffer sbuf = new StringBuffer("String s;");
         for (int i = 0; i < 130; i++)
             sbuf.append("s =\"" + i + "\";");
 
         cc.getDeclaredMethod("foo").insertBefore(sbuf.toString());
-        cc.getDeclaredMethod("test2").setBody(loader.get("javassist.bytecode.StackMapTest$T8b").getDeclaredMethod("test2"), null);
+        cc.getDeclaredMethod("test2").setBody(loader.get("plus.jdk.javassist.bytecode.StackMapTest$T8b").getDeclaredMethod("test2"), null);
         rebuildStackMaps2(cc);
         cc.writeFile();
         Object t1 = make(cc.getName());
@@ -426,13 +426,13 @@ public class StackMapTest extends TestCase {
     }
 
     public void testSwitchCase3() throws Exception {
-        CtClass cc = loader.get("javassist.bytecode.StackMapTest$T7c");
+        CtClass cc = loader.get("plus.jdk.javassist.bytecode.StackMapTest$T7c");
         StringBuffer sbuf = new StringBuffer("String s;");
         for (int i = 0; i < 130; i++)
             sbuf.append("s =\"" + i + "\";");
 
         cc.getDeclaredMethod("foo").insertBefore(sbuf.toString());
-        cc.getDeclaredMethod("test2").setBody(loader.get("javassist.bytecode.StackMapTest$T8c").getDeclaredMethod("test2"), null);
+        cc.getDeclaredMethod("test2").setBody(loader.get("plus.jdk.javassist.bytecode.StackMapTest$T8c").getDeclaredMethod("test2"), null);
 
         cc.writeFile();
         Object t1 = make(cc.getName());
@@ -475,13 +475,13 @@ public class StackMapTest extends TestCase {
     }
 
     public void testSwitchCase4() throws Exception {
-        CtClass cc = loader.get("javassist.bytecode.StackMapTest$T8e");
+        CtClass cc = loader.get("plus.jdk.javassist.bytecode.StackMapTest$T8e");
         StringBuffer sbuf = new StringBuffer("String s;");
         for (int i = 0; i < 130; i++)
             sbuf.append("s =\"" + i + "\";");
 
         cc.getDeclaredMethod("foo").insertBefore(sbuf.toString());
-        CtClass orig = loader.get("javassist.bytecode.StackMapTest$T8d");
+        CtClass orig = loader.get("plus.jdk.javassist.bytecode.StackMapTest$T8d");
         CtMethod origM = orig.getDeclaredMethod("test2");
         writeLdcw(origM);
         cc.getDeclaredMethod("test2").setBody(origM, null);
@@ -592,9 +592,9 @@ public class StackMapTest extends TestCase {
     }
 
     public void testInnerClass() throws Exception {
-        CtClass cc = loader.get("javassist.bytecode.StackMapTest$T9");
-        CtClass par = loader.get("javassist.bytecode.StackMapTest$T9$Parent");
-        CtClass in = loader.get("javassist.bytecode.StackMapTest$T9$In");
+        CtClass cc = loader.get("plus.jdk.javassist.bytecode.StackMapTest$T9");
+        CtClass par = loader.get("plus.jdk.javassist.bytecode.StackMapTest$T9$Parent");
+        CtClass in = loader.get("plus.jdk.javassist.bytecode.StackMapTest$T9$In");
         rebuildStackMaps2(cc);
         rebuildStackMaps2(par);
         rebuildStackMaps2(in);
@@ -625,7 +625,7 @@ public class StackMapTest extends TestCase {
     }
 
     public void testConstructor3() throws Exception {
-        CtClass cc = loader.get("javassist.bytecode.StackMapTest$C4");
+        CtClass cc = loader.get("plus.jdk.javassist.bytecode.StackMapTest$C4");
         MethodInfo mi = cc.getDeclaredMethod("foo").getMethodInfo();
         mi.rebuildStackMapForME(loader);
         CodeIterator ci = mi.getCodeAttribute().iterator();
@@ -650,7 +650,7 @@ public class StackMapTest extends TestCase {
     }
 
     public void testJIRA175() throws Exception {
-        CtClass cc = loader.get("javassist.bytecode.StackMapTest$C5");
+        CtClass cc = loader.get("plus.jdk.javassist.bytecode.StackMapTest$C5");
         cc.getDeclaredMethod("setter").instrument(new ExprEditor() {
             @Override
             public void edit(FieldAccess f) throws CannotCompileException {
@@ -680,7 +680,7 @@ public class StackMapTest extends TestCase {
     }
 
     public void testJIRA175b() throws Exception {
-        CtClass cc = loader.get("javassist.bytecode.StackMapTest$C6");
+        CtClass cc = loader.get("plus.jdk.javassist.bytecode.StackMapTest$C6");
         cc.getDeclaredMethod("setter").instrument(new ExprEditor() {
             public void edit(FieldAccess f) throws CannotCompileException {
                 if (!f.where().getMethodInfo().isMethod())
@@ -708,7 +708,7 @@ public class StackMapTest extends TestCase {
     }
 
     public void testForHibernate() throws Exception {
-        ClassFile cf = loader.makeClass("javassist.bytecode.StackMapTestHibTest").getClassFile();
+        ClassFile cf = loader.makeClass("plus.jdk.javassist.bytecode.StackMapTestHibTest").getClassFile();
         ConstPool cp = cf.getConstPool();
         MethodInfo mi = new MethodInfo(cp, "foo", "()V");
         Bytecode code = new Bytecode(cp, 0, 0);
@@ -780,7 +780,7 @@ public class StackMapTest extends TestCase {
     }
 
     public void testJsr() throws Exception {
-        CtClass cc = loader.makeClass("javassist.bytecode.StackMapTestJsrTest");
+        CtClass cc = loader.makeClass("plus.jdk.javassist.bytecode.StackMapTestJsrTest");
         ClassFile cf = cc.getClassFile();
         cf.setMajorVersion(ClassFile.JAVA_5);
         ConstPool cp = cf.getConstPool();
@@ -814,8 +814,8 @@ public class StackMapTest extends TestCase {
 
     public void tstCtClassType() throws Exception {
         ClassPool cp = ClassPool.getDefault();
-        CtClass cc = cp.get("javassist.CtClassType");
-        MethodInfo minfo = getMethodInfo(cc.getClassFile(), "getFields", "(Ljava/util/ArrayList;Ljavassist/CtClass;)V");
+        CtClass cc = cp.get("plus.jdk.javassist.CtClassType");
+        MethodInfo minfo = getMethodInfo(cc.getClassFile(), "getFields", "(Ljava/util/ArrayList;Lplus/jdk/javassist/CtClass;)V");
         rebuildStackMap(cc, cp, minfo);
     }
 

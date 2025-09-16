@@ -38,7 +38,7 @@ public class Main {
 	javassist.tools.reflect.Loader cl = new javassist.tools.reflect.Loader();
 	cl.makeReflective("sample.duplicate.Ball",
 			  "sample.duplicate.DuplicatedObject",
-			  "javassist.tools.reflect.ClassMetaobject");
+			  "plus.jdk.javassist.tools.reflect.ClassMetaobject");
 	cl.run("sample.duplicate.Viewer", args);
     }
 }

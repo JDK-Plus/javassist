@@ -89,7 +89,7 @@ public class ProxySimpleTest extends TestCase {
         pf2.setSuperclass(WriteReplace2.class);
         Object data2 = pf2.createClass().newInstance();
         Method meth = data2.getClass().getDeclaredMethod("writeReplace", new Class[0]);
-        assertEquals("javassist.util.proxy.SerializedProxy",
+        assertEquals("plus.jdk.javassist.util.proxy.SerializedProxy",
                     meth.invoke(data2, new Object[0]).getClass().getName());
     }
 

@@ -27,8 +27,8 @@ public class ProxyCacheGCTest extends TestCase
     {
         basePool = ClassPool.getDefault();
         try {
-            baseHandler = basePool.get("javassist.util.proxy.MethodHandler");
-            baseFilter = basePool.get("javassist.util.proxy.MethodFilter");
+            baseHandler = basePool.get("plus.jdk.javassist.util.proxy.MethodHandler");
+            baseFilter = basePool.get("plus.jdk.javassist.util.proxy.MethodFilter");
         } catch (NotFoundException e) {
             e.printStackTrace();
             fail("could not find class " + e);

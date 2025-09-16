@@ -812,7 +812,7 @@ public class JvstTest3 extends JvstTestRoot {
         assertNotNull(cp.get("test.Point"));
         cp = new ClassPool(null);
         cp.appendClassPath("./*");
-        assertNotNull(cp.get("javassist.bytecode.Gap0Example"));
+        assertNotNull(cp.get("plus.jdk.javassist.bytecode.Gap0Example"));
     }*/
 
     public void testVoidReturn() throws Exception {

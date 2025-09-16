@@ -32,7 +32,7 @@ public class ProxyFactoryPerformanceTest extends TestCase {
 	}
 	
 	public void testJavassist() throws Throwable {
-		callCreateClass("javassist", ProxyMaker.class);
+		callCreateClass("plus.jdk.javassist", ProxyMaker.class);
 	}
 	
 	/**

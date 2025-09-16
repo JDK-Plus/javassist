@@ -292,7 +292,7 @@ public class Compiler {
                 System.err.println(e);
             }
         else {
-            System.err.println("Javassist version " + CtClass.version);
+            System.err.println("plus.jdk.javassist version " + CtClass.version);
             System.err.println("No source file is specified.");
         }
     }

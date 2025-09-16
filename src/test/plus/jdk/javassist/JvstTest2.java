@@ -250,9 +250,9 @@ public class JvstTest2 extends JvstTestRoot {
     // not used anymore.
     private void notTestGetInner() throws Exception {
         ClassPool pool = ClassPool.getDefault();
-        CtClass c = pool.get("javassist.CtMethod.ConstParameter");
-        CtClass d = pool.get("javassist.CtMethod.ConstParameter");
-        CtClass e = pool.get("javassist.CtMethod$ConstParameter");
+        CtClass c = pool.get("plus.jdk.javassist.CtMethod.ConstParameter");
+        CtClass d = pool.get("plus.jdk.javassist.CtMethod.ConstParameter");
+        CtClass e = pool.get("plus.jdk.javassist.CtMethod$ConstParameter");
         assertSame(c, d);
         assertSame(c, e);
         try {
@@ -313,22 +313,22 @@ public class JvstTest2 extends JvstTestRoot {
         cp = new ClassPool(null);
         cp.insertClassPath(JAR_PATH + "javassist.jar");
 
-        url = cp.find("javassist.CtClass").toString();
+        url = cp.find("plus.jdk.javassist.CtClass").toString();
         System.out.println(url);
         assertTrue(url.startsWith("jar:file:"));
-        assertTrue(url.endsWith("javassist.jar!/javassist/CtClass.class"));
+        assertTrue(url.endsWith("javassist.jar!/plus/jdk/javassist/CtClass.class"));
 
-        assertNull(cp.find("javassist.TestURL"));
+        assertNull(cp.find("plus.jdk.javassist.TestURL"));
 
         cp = new ClassPool(null);
         cp.insertClassPath(new LoaderClassPath(cloader));
 
-        url = cp.find("javassist.CtMethod").toString();
+        url = cp.find("plus.jdk.javassist.CtMethod").toString();
         System.out.println(url);
         // assertTrue(url.startsWith("jar:file:"));
         // assertTrue(url.endsWith("javassist.jar!/javassist/CtMethod.class"));
 
-        assertNull(cp.find("javassist.TestURL"));
+        assertNull(cp.find("plus.jdk.javassist.TestURL"));
 
         cp = new ClassPool(null);
         cp.insertClassPath(new ByteArrayClassPath("test2.ByteArray", null));
@@ -755,7 +755,7 @@ public class JvstTest2 extends JvstTestRoot {
         System.out.println(sloader.get("int[]"));
         System.out.println(sloader.get("java.lang.Object"));
         System.out.println(sloader.get("java.lang.String"));
-        System.out.println(sloader.get("javassist.CtNewClass"));
+        System.out.println(sloader.get("plus.jdk.javassist.CtNewClass"));
     }
 
     public void testDotClass() throws Exception {

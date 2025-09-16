@@ -6,9 +6,9 @@ package plus.jdk.javassist.tools.reflect;
 public class ClassMetaobjectTest {
     public static void main(String[] args) throws Throwable {
         Loader loader = new Loader();
-        loader.makeReflective("javassist.tools.reflect.Person",
-                              "javassist.tools.reflect.Metaobject",
-                              "javassist.tools.reflect.ClassMetaobject");
-        loader.run("javassist.tools.reflect.Person", new String[] {});
+        loader.makeReflective("plus.jdk.javassist.tools.reflect.Person",
+                              "plus.jdk.javassist.tools.reflect.Metaobject",
+                              "plus.jdk.javassist.tools.reflect.ClassMetaobject");
+        loader.run("plus.jdk.javassist.tools.reflect.Person", new String[] {});
     }
 }

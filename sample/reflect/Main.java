@@ -25,7 +25,7 @@ public class Main {
         Loader cl = (Loader)Main.class.getClassLoader();
         cl.makeReflective("sample.reflect.Person",
                           "sample.reflect.VerboseMetaobj",
-                          "javassist.tools.reflect.ClassMetaobject");
+                          "plus.jdk.javassist.tools.reflect.ClassMetaobject");
 
         cl.run("sample.reflect.Person", args);
     }
