@@ -25,6 +25,7 @@ import java.lang.reflect.Modifier;
 import java.security.ProtectionDomain;
 import java.util.*;
 import java.lang.ref.WeakReference;
+import java.util.concurrent.atomic.AtomicInteger;
 
 import plus.jdk.javassist.CannotCompileException;
 
@@ -807,8 +808,10 @@ public class ProxyFactory {
             basename = "org.javassist.tmp." + basename;
     }
 
+    private final static AtomicInteger counter = new AtomicInteger();
+
     private void allocateClassName() {
-        classname = makeProxyName(basename);
+        classname = makeProxyName(basename) + "_" + counter.getAndIncrement();
     }
 
     private static Comparator sorter = new Comparator() {
